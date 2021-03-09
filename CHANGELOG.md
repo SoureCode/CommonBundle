@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ## 0.1.1 - TBD
 
+### Added
+
+- Add missing bundle file
+
 ###  Removed
 
 - Remove non-required docker-compose file
