@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file, in reverse 
 
 ## 0.1.1 - TBD
 
+###  Removed
+
+- Remove non-required docker-compose file
+
 ## 0.1.0 - 2021-03-09
 
 **Note:** Initial release. :rocket:
