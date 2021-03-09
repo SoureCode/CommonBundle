@@ -1,0 +1,12 @@
+
+sourecode:
+    common:
+        email:
+            signature: "Thanks,"
+            team: "The Team"
+        message:
+            close: "Close"
+            info: "Info"
+            warning: "Warning"
+            success: "Success"
+            error: "Error"

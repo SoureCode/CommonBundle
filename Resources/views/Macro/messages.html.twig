@@ -1,0 +1,29 @@
+{% macro default(message, icon, type, header) %}
+    <div class="alert alert-{{ type }} alert-dismissible fade show" role="alert">
+        <span class="{{ icon }} me-2"></span>
+        <h4 class="alert-heading">{{ header|default(type)|trans }}</h4>
+        <p>{{ message|trans }}</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="{{ 'sourecode.common.message.close'|trans }}"></button>
+    </div>
+{% endmacro %}
+
+{% macro info(message) %}
+    {% import _self as messages %}
+    {{ messages.default(message, 'fas fa-info-circle', 'info', 'sourecode.common.message.info') }}
+{% endmacro %}
+
+{% macro success(message) %}
+    {% import _self as messages %}
+    {{ messages.default(message, 'fas fa-check-circle', 'success', 'sourecode.common.message.success') }}
+{% endmacro %}
+
+{% macro warning(message) %}
+    {% import _self as messages %}
+    {{ messages.default(message, 'fas fa-exclamation-circle', 'warning', 'sourecode.common.message.warning') }}
+{% endmacro %}
+
+
+{% macro error(message) %}
+    {% import _self as messages %}
+    {{ messages.default(message, 'fas fa-exclamation-circle', 'danger', 'sourecode.common.message.error') }}
+{% endmacro %}
