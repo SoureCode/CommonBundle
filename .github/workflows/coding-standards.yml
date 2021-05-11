@@ -1,22 +1,20 @@
 name: "Check Coding Standards"
 
 on:
-    create:
     pull_request:
     push:
+        branches:
+            - master
 
 jobs:
     coding-standards:
         name: "Check Coding Standards"
-
-        runs-on: ${{ matrix.operating-system }}
+        runs-on: "ubuntu-latest"
 
         strategy:
             matrix:
                 php-version:
                     - "8.0"
-                operating-system:
-                    - "ubuntu-latest"
         steps:
             -   name: "Checkout"
                 uses: "actions/checkout@v2"
@@ -34,8 +32,8 @@ jobs:
                     path: |
                         ~/.composer/cache
                         vendor
-                    key: "php-${{ matrix.php-version }}-${{ matrix.dependencies }}"
-                    restore-keys: "php-${{ matrix.php-version }}-${{ matrix.dependencies }}"
+                    key: "php-${{ matrix.php-version }}"
+                    restore-keys: "php-${{ matrix.php-version }}"
 
             -   name: "Install dependencies"
                 run: "composer install --no-interaction --no-progress --no-suggest"

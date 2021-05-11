@@ -1,21 +1,20 @@
 name: "Composer validate"
 
 on:
-    create:
     pull_request:
     push:
+        branches:
+            - master
 
 jobs:
     validate:
         name: "Composer validate"
-        runs-on: ${{ matrix.operating-system }}
+        runs-on: "ubuntu-latest"
 
         strategy:
             matrix:
                 php-version:
                     - "8.0"
-                operating-system:
-                    - "ubuntu-latest"
         steps:
             -   uses: actions/checkout@v2
 
@@ -28,6 +27,3 @@ jobs:
 
             -   name: Validate composer.json and composer.lock
                 run: composer validate
-
-            -   name: Composer outdated
-                run: composer outdated --minor-only --direct --strict
