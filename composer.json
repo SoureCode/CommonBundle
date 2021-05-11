@@ -24,7 +24,7 @@
     },
     "require": {
         "php": ">=8.0",
-        "sourecode/common-component": "^0.1",
+        "sourecode/common-component": "dev-master",
         "symfony/http-kernel": "^5.2",
         "symfony/form": "^5.2",
         "symfony/options-resolver": "^5.2",
