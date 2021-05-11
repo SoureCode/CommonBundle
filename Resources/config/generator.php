@@ -22,6 +22,6 @@ return function (ContainerConfigurator $container) {
         ->deprecate(
             'SoureCode/CommonBundle',
             '0.2.0',
-            'Service %service_id% is deprecated since 0.2.0 and will be removed in 1.0.0.'
+            'Service %alias_id% is deprecated since 0.2.0 and will be removed in 1.0.0.'
         );
 };
