@@ -16,12 +16,12 @@ return function (ContainerConfigurator $container) {
         ->deprecate(
             'SoureCode/CommonBundle',
             '0.2.0',
-            'Service sourecode.common.generator.random is deprecated since 0.2.0 and will be removed in 1.0.0.'
+            'Service %service_id% is deprecated since 0.2.0 and will be removed in 1.0.0.'
         );
     $services->alias(RandomGeneratorInterface::class, 'sourecode.common.generator.random')
         ->deprecate(
             'SoureCode/CommonBundle',
             '0.2.0',
-            'Service '.RandomGeneratorInterface::class.' is deprecated since 0.2.0 and will be removed in 1.0.0.'
+            'Service %service_id% is deprecated since 0.2.0 and will be removed in 1.0.0.'
         );
 };
