@@ -5,6 +5,9 @@ namespace SoureCode\Bundle\Common\Form\Type;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
+/**
+ * @deprecated Deprecated since 0.2.0 and will be remove in 1.0.0
+ */
 abstract class AbstractResourceType extends AbstractType
 {
     /**
